@@ -6,7 +6,7 @@ const squares = [...Array(4).keys()].map(i => $('#square-' + (i+1)))
 const progressBar = $('.answer-progress-bar')
 const inputElement = $('.answer-input')
 
-let puzzleTime = 7
+let puzzleTime = 5
 
 // handles generating puzzle and returning result
 export async function doPuzzle(){
@@ -20,7 +20,7 @@ export async function doPuzzle(){
     console.log(nums)
     await displayNumbers(nums)
 
-    const metronome = (puzzleTime == 7) ? playSound('assets/metronome.mp3') : playSound('assets/long-metronome.mp3')
+    const metronome = (puzzleTime == 5) ? playSound('assets/metronome.mp3') : playSound('assets/long-metronome.mp3')
     const puzzles = [...Array(4)].map(_ => generateRandomPuzzle())
 
     // clear and focus input window
